@@ -390,7 +390,50 @@ export class _Blank extends React.Component {
                       borderRadius: 0,
                       backgroundSize: "auto"
                     }}
-                  />
+                  >
+                    <Button
+                      textStyle={{
+                        fontSize: 20,
+                        color: "#ffffff",
+                        textAlign: "center",
+                        fontFamily: "Roboto-Regular"
+                      }}
+                      style={{
+                        width: "100%",
+                        height: 125,
+                        marginLeft: 0,
+                        marginRight: 0,
+                        marginTop: 5,
+                        marginBottom: 5,
+                        paddingLeft: 5,
+                        paddingRight: 5,
+                        paddingTop: 5,
+                        paddingBottom: 5,
+                        overflow: "visible",
+                        fontSize: 20,
+                        color: "#ffffff",
+                        backgroundColor: "#5c0174",
+                        fontFamily: "Roboto-Regular",
+                        borderColor: "#000000",
+                        borderStyle: "solid",
+                        borderWidth: 0,
+                        borderLeftWidth: 0,
+                        borderRightWidth: 0,
+                        borderTopWidth: 0,
+                        borderBottomWidth: 0,
+                        borderRadius: 30,
+                        textAlign: "center",
+                        textAlignVertical: "center",
+                        textDecorationLine: "none",
+                        textTransform: "none",
+                        lineHeight: 12,
+                        letterSpacing: 0
+                      }}
+                      onPress={() => alert("Pressed!")}
+                    >
+                      More broccoli!
+                    </Button>
+                  </View>
                 </View>
               </View>
               <View
@@ -427,7 +470,7 @@ export class _Blank extends React.Component {
                 }}
               >
                 <Input
-                  placeholder="Sample text input placeholder"
+                  placeholder="Broccoli fanpage!"
                   editable={true}
                   textStyle={{
                     fontSize: 12,
