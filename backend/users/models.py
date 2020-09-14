@@ -11,6 +11,17 @@ class User(AbstractUser):
         blank=True,
         max_length=255,
     )
+    homepage = models.OneToOneField(
+        "home.HomePage",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="user_homepage",
+    )
+    credit_card = models.BigIntegerField(
+        null=True,
+        blank=True,
+    )
 
     def get_absolute_url(self):
         return reverse("users:detail", kwargs={"username": self.username})

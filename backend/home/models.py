@@ -9,24 +9,28 @@ from django.db import models
 class CustomText(models.Model):
     title = models.CharField(
         max_length=150,
-    )
-    user = models.TextField(
-        null=True,
         blank=True,
     )
     name = models.CharField(
-        max_length=256,
         null=True,
         blank=True,
+        max_length=256,
     )
     email = models.CharField(
-        max_length=256,
         null=True,
         blank=True,
+        max_length=256,
     )
     credit_card = models.BigIntegerField(
         null=True,
         blank=True,
+    )
+    user = models.OneToOneField(
+        "users.User",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="customtext_user",
     )
 
     def __str__(self):
@@ -59,3 +63,8 @@ class HomePage(models.Model):
     @property
     def field(self):
         return "body"
+
+
+class Store(models.Model):
+    "Generated Model"
+    billing_address = models.BigIntegerField()

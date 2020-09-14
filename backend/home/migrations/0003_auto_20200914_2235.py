@@ -6,38 +6,38 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('home', '0002_load_initial_data'),
+        ("home", "0002_load_initial_data"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='customtext',
-            name='credit_card',
+            model_name="customtext",
+            name="credit_card",
             field=models.BigIntegerField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='customtext',
-            name='email',
+            model_name="customtext",
+            name="email",
             field=models.CharField(blank=True, max_length=256, null=True),
         ),
         migrations.AddField(
-            model_name='customtext',
-            name='name',
+            model_name="customtext",
+            name="name",
             field=models.CharField(blank=True, max_length=256, null=True),
         ),
         migrations.AddField(
-            model_name='customtext',
-            name='user',
+            model_name="customtext",
+            name="user",
             field=models.TextField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='homepage',
-            name='button',
+            model_name="homepage",
+            name="button",
             field=models.BooleanField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='homepage',
-            name='switch',
+            model_name="homepage",
+            name="switch",
             field=models.BooleanField(blank=True, null=True),
         ),
     ]
