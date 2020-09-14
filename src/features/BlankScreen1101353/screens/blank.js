@@ -470,10 +470,10 @@ export class _Blank extends React.Component {
                 }}
               >
                 <Input
-                  placeholder="Broccoli fanpage!"
+                  placeholder="Broccoli Fan Club App!"
                   editable={true}
                   textStyle={{
-                    fontSize: 12,
+                    fontSize: 20,
                     color: "#ffffff",
                     textAlign: "left",
                     fontFamily: "Roboto-Regular"
@@ -482,14 +482,14 @@ export class _Blank extends React.Component {
                     width: "100%",
                     marginLeft: 0,
                     marginRight: 0,
-                    marginTop: 5,
+                    marginTop: 40,
                     marginBottom: 5,
-                    paddingLeft: 5,
+                    paddingLeft: 40,
                     paddingRight: 5,
                     paddingTop: 5,
                     paddingBottom: 5,
                     overflow: "visible",
-                    fontSize: 12,
+                    fontSize: 20,
                     color: "#ffffff",
                     backgroundColor: "#000000",
                     fontFamily: "Roboto-Regular",
