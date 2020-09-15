@@ -8,8 +8,8 @@ from django.db import models
 
 class CustomText(models.Model):
     title = models.CharField(
-        max_length=150,
         blank=True,
+        max_length=150,
     )
     name = models.CharField(
         null=True,
@@ -27,9 +27,9 @@ class CustomText(models.Model):
     )
     user = models.OneToOneField(
         "users.User",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="customtext_user",
     )
 

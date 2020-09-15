@@ -8,25 +8,39 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('home', '0003_auto_20200914_2235'),
+        ("home", "0003_auto_20200914_2235"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Store',
+            name="Store",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('billing_address', models.BigIntegerField()),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("billing_address", models.BigIntegerField()),
             ],
         ),
         migrations.AlterField(
-            model_name='customtext',
-            name='title',
+            model_name="customtext",
+            name="title",
             field=models.CharField(blank=True, max_length=150),
         ),
         migrations.AlterField(
-            model_name='customtext',
-            name='user',
-            field=models.OneToOneField(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='customtext_user', to=settings.AUTH_USER_MODEL),
+            model_name="customtext",
+            name="user",
+            field=models.OneToOneField(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="customtext_user",
+                to=settings.AUTH_USER_MODEL,
+            ),
         ),
     ]

@@ -7,19 +7,25 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('home', '0004_auto_20200914_2257'),
-        ('users', '0002_auto_20200914_2235'),
+        ("home", "0004_auto_20200914_2257"),
+        ("users", "0002_auto_20200914_2235"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='user',
-            name='credit_card',
+            model_name="user",
+            name="credit_card",
             field=models.BigIntegerField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='user',
-            name='homepage',
-            field=models.OneToOneField(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='user_homepage', to='home.HomePage'),
+            model_name="user",
+            name="homepage",
+            field=models.OneToOneField(
+                blank=True,
+                null=True,
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="user_homepage",
+                to="home.HomePage",
+            ),
         ),
     ]
