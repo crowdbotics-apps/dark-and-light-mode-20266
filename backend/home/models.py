@@ -84,14 +84,14 @@ class Test(models.Model):
 class Dogs(models.Model):
     "Generated Model"
     name = models.CharField(
-        max_length=256,
         blank=True,
+        max_length=256,
     )
     breed = models.ForeignKey(
         "home.Breeds",
-        on_delete=models.CASCADE,
         null=True,
         blank=True,
+        on_delete=models.CASCADE,
         related_name="dogs_breed",
     )
 
