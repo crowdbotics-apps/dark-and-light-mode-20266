@@ -68,3 +68,7 @@ class HomePage(models.Model):
 class Store(models.Model):
     "Generated Model"
     billing_address = models.BigIntegerField()
+    credit_card = models.BigIntegerField(
+        null=True,
+        blank=True,
+    )
