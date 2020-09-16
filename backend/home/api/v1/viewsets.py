@@ -1,7 +1,9 @@
 from rest_framework import viewsets
 from rest_framework import authentication
 from .serializers import (
+    BreedsSerializer,
     CustomTextSerializer,
+    DogsSerializer,
     HomePageSerializer,
     StoreSerializer,
     TestSerializer,
@@ -19,7 +21,7 @@ from home.api.v1.serializers import (
     HomePageSerializer,
     UserSerializer,
 )
-from home.models import CustomText, HomePage, Store, Test
+from home.models import Breeds, CustomText, Dogs, HomePage, Store, Test
 
 
 class SignupViewSet(ModelViewSet):
@@ -75,3 +77,21 @@ class TestViewSet(viewsets.ModelViewSet):
         authentication.TokenAuthentication,
     )
     queryset = Test.objects.all()
+
+
+class DogsViewSet(viewsets.ModelViewSet):
+    serializer_class = DogsSerializer
+    authentication_classes = (
+        authentication.SessionAuthentication,
+        authentication.TokenAuthentication,
+    )
+    queryset = Dogs.objects.all()
+
+
+class BreedsViewSet(viewsets.ModelViewSet):
+    serializer_class = BreedsSerializer
+    authentication_classes = (
+        authentication.SessionAuthentication,
+        authentication.TokenAuthentication,
+    )
+    queryset = Breeds.objects.all()

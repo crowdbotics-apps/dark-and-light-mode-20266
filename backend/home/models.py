@@ -79,3 +79,26 @@ class Test(models.Model):
     test = models.CharField(
         max_length=256,
     )
+
+
+class Dogs(models.Model):
+    "Generated Model"
+    name = models.CharField(
+        max_length=256,
+        blank=True,
+    )
+    breed = models.ForeignKey(
+        "home.Breeds",
+        on_delete=models.CASCADE,
+        null=True,
+        blank=True,
+        related_name="dogs_breed",
+    )
+
+
+class Breeds(models.Model):
+    "Generated Model"
+    name = models.CharField(
+        max_length=256,
+    )
+    is_big_dog = models.BooleanField()
