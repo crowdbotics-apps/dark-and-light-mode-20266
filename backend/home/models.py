@@ -102,3 +102,12 @@ class Breeds(models.Model):
         max_length=256,
     )
     is_big_dog = models.BooleanField()
+
+
+class Lightmode(models.Model):
+    "Generated Model"
+    color = models.ForeignKey(
+        "home.HomePage",
+        on_delete=models.CASCADE,
+        related_name="lightmode_color",
+    )

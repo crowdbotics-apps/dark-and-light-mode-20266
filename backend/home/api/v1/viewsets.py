@@ -5,6 +5,7 @@ from .serializers import (
     CustomTextSerializer,
     DogsSerializer,
     HomePageSerializer,
+    LightmodeSerializer,
     StoreSerializer,
     TestSerializer,
 )
@@ -21,7 +22,7 @@ from home.api.v1.serializers import (
     HomePageSerializer,
     UserSerializer,
 )
-from home.models import Breeds, CustomText, Dogs, HomePage, Store, Test
+from home.models import Breeds, CustomText, Dogs, HomePage, Lightmode, Store, Test
 
 
 class SignupViewSet(ModelViewSet):
@@ -95,3 +96,12 @@ class BreedsViewSet(viewsets.ModelViewSet):
         authentication.TokenAuthentication,
     )
     queryset = Breeds.objects.all()
+
+
+class LightmodeViewSet(viewsets.ModelViewSet):
+    serializer_class = LightmodeSerializer
+    authentication_classes = (
+        authentication.SessionAuthentication,
+        authentication.TokenAuthentication,
+    )
+    queryset = Lightmode.objects.all()

@@ -5,6 +5,7 @@ from .viewsets import (
     CustomTextViewSet,
     DogsViewSet,
     HomePageViewSet,
+    LightmodeViewSet,
     StoreViewSet,
     TestViewSet,
 )
@@ -25,6 +26,7 @@ router.register("store", StoreViewSet)
 router.register("test", TestViewSet)
 router.register("dogs", DogsViewSet)
 router.register("breeds", BreedsViewSet)
+router.register("lightmode", LightmodeViewSet)
 
 urlpatterns = [
     path("", include(router.urls)),
