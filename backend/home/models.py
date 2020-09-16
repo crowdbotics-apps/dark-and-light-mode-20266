@@ -72,3 +72,10 @@ class Store(models.Model):
         null=True,
         blank=True,
     )
+
+
+class Test(models.Model):
+    "Generated Model"
+    test = models.CharField(
+        max_length=256,
+    )
